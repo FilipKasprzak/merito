@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1{
+    color: #333;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    margin-left: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* sekcja Hero */
+.hero {
+    background: url('https://picsum.photos/seed/taskmaster/1200/600') center/cover no-repeat;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 7, 0.5);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-download {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+}
+
+/*sekcja funkcje */
+.features {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1 1 250;
+    margin: 20px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* sekcja opinie */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.testimonial{
+    background-color: #ffffff;
+    flex:  1 1 45%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);    
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* sekacja pobierz */
+
+.download {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.download h2 {
+    margin-bottom: 20px;
+}
+
+.download p {
+    margin-bottom: 20px;
+}
+
+/* stopka(footer) */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links  a:hover {
+    color: #007BFF;
+}
+
+/* formularz newslettera */
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.newsletter label {
+    margin-right: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    flex: 1;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #0056b3;
+}
+
+/* responsywność */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+}
+
+nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin-top: 10px 0;
+}
+
+.features-grid {
+    flex-direction: column;
+}
+
+.testimonials-grid {
+    flex-direction: column;
+}
+
+.footer-container {
+    flex-direction: column;
+    text-align: center;
+}
