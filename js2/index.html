@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Formularz kontakowy</h2>
+        <form id="contactForm" method="get">
+            <label for="name">Imię</label>
+            <input type="text" name="name" id="name" required><br><br>
+    
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="phone">Numer telefonu</label>
+            <input type="phone" name="phone" id="phone" required><br><br>
+
+            <label for="age">Wiek</label>
+            <input type="age" name="age" id="age" required><br><br>
+    
+            <label>Płeć:</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" id="male" value="Mężczyzna" required>
+                <label for="male">Mężczyzna</label>
+
+                <input type="radio" name="gender" id="female" value="Kobieta">
+                <label for="female">Kobieta</label>
+
+                <input type="radio" name="gender" id="other" value="BaśnioweStwory">
+                <label for="other">Baśniowe Stwory</label>
+            </div>
+
+            <label>Zainteresowania:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" name="interests" id="sport" value="Sport">
+                <label for="sport">Sport</label>
+
+                <input type="checkbox" name="interests" id="music" value="Muzyka">
+                <label for="music">Muzyka</label>
+
+                <input type="checkbox" name="interests" id="movies" value="Filmy">
+                <label for="movies">Filmy</label>
+            </div>
+
+            <label for="message">Wiadmość:</label><br>
+            <textarea name="message" id="message" cols="50" rows="4"></textarea><br><br>
+
+            <label for="accept">Zgoda</label>
+            <input type="checkbox" name="accept" id="accept" value="accept">
+            
+            <button type="submit">Wyślij</button>
+        </form>
+    
+        <div id="result"></div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
